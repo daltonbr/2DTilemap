@@ -21,3 +21,13 @@ This course was originally checked for Unity 2017.2, but I am using a more recen
 To add a collider to a tilemap, select the Tilemap that you want to put a collider (normally is a child of a **Grid** in your Hierarchy), then add a `TilemapCollider2D`, and then a `CompositeCollider2D`. In the first one select `Used by Composite`
 
 Optionally select `Generation Type: Synchronous` (in the CompositeCollider2D). The Collider will 'regenerate' itself, if you remove it.
+
+### Cinemachine
+
+Add a `Cinemachine` -> `Create 2D Camera`  
+
+Select the Soft and Hard Zones in Game Screen.  
+
+`Add Extensions` (at bottom of the Cinemachine Virtual Camera) -> `Cinemachine Confiner`
+Then add a CompositeCollider2D or a PolygonCollider2D to your Background object and then use this collider as a `Bounding Shape 2D` for our Confiner.
+
